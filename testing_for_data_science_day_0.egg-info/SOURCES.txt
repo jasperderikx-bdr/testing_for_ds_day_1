@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+setup.py
+src/__init__.py
+src/data_model.py
+testing_for_data_science_day_0.egg-info/PKG-INFO
+testing_for_data_science_day_0.egg-info/SOURCES.txt
+testing_for_data_science_day_0.egg-info/dependency_links.txt
+testing_for_data_science_day_0.egg-info/requires.txt
+testing_for_data_science_day_0.egg-info/top_level.txt

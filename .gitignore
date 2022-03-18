@@ -1,0 +1,22 @@
+## The .gitignore file specifies things that git should ignore.
+.git/
+
+data/*
+!data/.gitkeep
+
+# files after building package
+dist/
+build/
+healt.egg-info/
+
+# Testing
+tests/.pytest_cache/*
+tests/pytest_basetemp/*
+
+# IDE
+__pycache__/
+.idea
+.mypy_cache/
+.vscode/
+ha_venv
+.env
