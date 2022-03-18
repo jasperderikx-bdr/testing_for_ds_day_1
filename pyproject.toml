@@ -24,10 +24,10 @@ ignore_missing_imports = true
 disable_error_code = [
     "attr-defined"
 ]
-# files = [
-#     "src/**/*.py",
-#     "tests/**/*.py"
-# ]
+files = [
+    "hanoi/**/*.py",
+    "tests/**/*.py"
+]
 
 [tool.pytest.ini_options]
 testpaths = [
@@ -38,7 +38,7 @@ markers = [
 ]
 addopts = "--basetemp tests/pytest_basetemp"
 cache_dir = "tests/.pytest_cache"
-junit_suite_name = "nutriscore"
+junit_suite_name = "test_training"
 junit_family = "xunit1"
 filterwarnings = [
     'ignore::DeprecationWarning'

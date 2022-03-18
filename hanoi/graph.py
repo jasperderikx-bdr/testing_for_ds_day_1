@@ -6,22 +6,19 @@ def compact_hanoi_graph(number_of_disks: int) -> str:
         return " a \nb-c"
     else:
         top = compact_hanoi_graph(number_of_disks - 1)
-        peg_left_bottom_of_top = top.split("\n")[-1][0]
-        peg_right_bottom_of_top = top[-1]
 
-        left = top.translate(top.maketrans(f"a{peg_right_bottom_of_top}{peg_left_bottom_of_top}",
-                                           f"{peg_left_bottom_of_top}a{peg_right_bottom_of_top}"))
-
-        right = top.translate(top.maketrans(f"a{peg_left_bottom_of_top}{peg_right_bottom_of_top}",
-                                            f"{peg_right_bottom_of_top}a{peg_left_bottom_of_top}"))
+        left = top.translate(top.maketrans("ac", "ca"))
+        right = top.translate(top.maketrans("ab", "ba"))
+        top = top.translate(top.maketrans("bc", "cb"))
 
         top = re.sub("(\w+)", lambda m: "a" + m.group(1), top)
-        left = re.sub("(\w+)", lambda m: peg_right_bottom_of_top + m.group(1), left)
-        right = re.sub("(\w+)", lambda m: peg_left_bottom_of_top + m.group(1), right)
+        left = re.sub("(\w+)", lambda m: "b" + m.group(1), left)
+        right = re.sub("(\w+)", lambda m: "c" + m.group(1), right)
 
         left = left.split("\n")
         right = right.split("\n")
         top = top.split("\n")
+
         bottom = [f"{x} {y}" for x, y in zip(left[:-1], right[:-1])] + [left[-1] + "-" + right[-1]]
 
         margin = len(top) * " "
