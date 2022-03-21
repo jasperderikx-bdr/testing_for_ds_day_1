@@ -25,7 +25,7 @@ disable_error_code = [
     "attr-defined"
 ]
 files = [
-    "hanoi/**/*.py",
+    "src/**/*.py",
     "tests/**/*.py"
 ]
 

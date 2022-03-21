@@ -9,10 +9,10 @@
 
 Testing for Data Science</h2>
 
-<h4 align="center">Day 0</h4>
+<h4 align="center">Day 1</h4>
 
-These are the prerequisites. Work yourself through the readme to prepare yourself for the training.
-
+With these prerequisites you can make sure everything is set up correctly for the full training. 
+Don't expect to learn a lot; the main goal is to address if anything is not working for you.
 
 ## ⚡ Installation
 
@@ -36,7 +36,7 @@ Install the project in develop mode, with:
 ```sh
 pip install -e .[develop]
 ```
-This will install all the dependencies listed in ```requirements.txt``` and ```requirements.dev.txt```.
+This will install all the dependencies listed in ```requirements.txt``` and ```requirements.dev.txt```. Have a look at them to get an idea with what we're working.
 
 ###3. setup pre-commit
 
@@ -69,9 +69,11 @@ If you run pytest:
 pytest
 ```
 
-you will see that not all tests pass. Open the file: ... and follow the instructions in the comments.
+you will see that not all tests pass. Open the file: ```tests\test_exercises``` and follow the instructions in the comments.
 
 You've completed the assignment if:
 - All tests pass.
 - The pre-commit flags are passed.
-- You commited and pushed your code.
+- You committed and pushed your code.
+
+Please let me know if anything is not working!
