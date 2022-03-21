@@ -18,10 +18,10 @@ class Position:
         if len(self.representation) > 100:
             warnings.warn("Are you sure you want to get involved with such a challenge?")
 
-    def __str__(self):
+    def __str__(self) -> str:
         return self.representation
 
-    def __eq__(self, other):
+    def __eq__(self, other: object) -> bool:
         if isinstance(other, Position):
             return self.representation == other.representation
         return False

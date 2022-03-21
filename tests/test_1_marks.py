@@ -1,4 +1,4 @@
-from hanoi.basics import number_of_positions, Position, number_of_steps_of_solution
+from hanoi.basics import Position, number_of_positions, number_of_steps_of_solution
 
 
 # -- Exercise 1 --
@@ -33,14 +33,14 @@ def test_number_of_positions() -> None:
 # -- Exercise 6 --
 # If you call number_of_steps_of_solution() with a string(), it probably raises an error. For now, we don't know how to
 # handle this properly, so mark the test as a failure.
-def test_wrong_input():
+def test_wrong_input() -> None:
     number_of_steps_of_solution(number_of_disks="12")  # type: ignore
 
 
 # -- Exercise 7 --
 # The following test, raises a warning. Because we purposely want to test a long position, let pytest ignore the warning
 # using pytest.marks.filterwarnings (https://docs.pytest.org/en/6.2.x/reference.html#pytest-mark-filterwarnings)
-def test_long_position():
+def test_long_position() -> None:
     Position(101 * "a")
 
 

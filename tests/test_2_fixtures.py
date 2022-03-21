@@ -1,67 +1,68 @@
-import pytest
+from typing import Generator, List
 
+import pytest
 
 # -- Exercise 1 --
 # Make test_fixture_sequence() pass. The test may only depend on 2 fixtures, but you can change the dependencies of the
 # following fixtures.
 
+
 @pytest.fixture
-def b():
+def b() -> Generator:
     yield []
 
 
 @pytest.fixture
-def v(b):
+def v(b: List) -> None:
     b.append("v")
 
 
 @pytest.fixture
-def a(b):
+def a(b: List) -> None:
     b.append("a")
 
 
 @pytest.fixture
-def n(b):
+def n(b: List) -> None:
     b.append("n")
 
 
 @pytest.fixture
-def t(b):
+def t(b: List) -> None:
     b.append("t")
 
 
 @pytest.fixture
-def g(b):
+def g(b: List) -> None:
     b.append("g")
 
 
 @pytest.fixture
-def e(b):
+def e(b: List) -> None:
     b.append("e")
 
 
 @pytest.fixture
-def duplicate(b):
+def duplicate(b: List) -> None:
     for i in range(len(b)):
         b.append(b[i])
 
 
 @pytest.fixture
-def rotate_1(b):
+def rotate_1(b: List) -> None:
     b.insert(0, b[-1])
     b.pop()
 
 
 @pytest.fixture
-def rotate_3(b):
+def rotate_3(b: List) -> None:
     for i in range(3):
         b.insert(0, b[-1])
         b.pop()
 
 
-def test_fixture_sequence(b):  # This test may only depend on 2 fixtures, so "b" and only 1 other fixture.
+def test_fixture_sequence(b: List) -> None:  # This test may only depend on 2 fixtures, so "b" and only 1 other fixture.
     assert b == ["v", "a", "n", "t", "a", "g", "e"]
-
 
 # -- Exercise 2 --
 # What happens if a fixture with a larger scope, depends on a fixture with a smaller scope?

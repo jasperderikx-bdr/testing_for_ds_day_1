@@ -1,5 +1,6 @@
-from hanoi.basics import Position
 from typing import List
+
+from hanoi.basics import Position
 
 
 def move_disk(disk_number: int, position: Position, peg: str) -> Position:
@@ -8,7 +9,7 @@ def move_disk(disk_number: int, position: Position, peg: str) -> Position:
         new_representation = old_representation[:disk_number] + peg + old_representation[disk_number + 1:]
         return Position(new_representation)
     else:
-        raise (ValueError, f"Invalid move. (Disk: {disk_number}, Position: {position}, peg: {peg}.")
+        raise ValueError(f"Invalid move. (Disk: {disk_number}, Position: {position}, peg: {peg}.")
 
 
 def move_is_valid(disk_number: int, position: Position, peg: str) -> bool:

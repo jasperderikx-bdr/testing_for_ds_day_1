@@ -15,15 +15,15 @@ def compact_hanoi_graph(number_of_disks: int) -> str:
         left = re.sub("(\w+)", lambda m: "b" + m.group(1), left)
         right = re.sub("(\w+)", lambda m: "c" + m.group(1), right)
 
-        left = left.split("\n")
-        right = right.split("\n")
-        top = top.split("\n")
+        left_list = left.split("\n")
+        right_list = right.split("\n")
+        top_list = top.split("\n")
 
-        bottom = [f"{x} {y}" for x, y in zip(left[:-1], right[:-1])] + [left[-1] + "-" + right[-1]]
+        bottom = [f"{x} {y}" for x, y in zip(left_list[:-1], right_list[:-1])] + [left_list[-1] + "-" + right_list[-1]]
 
-        margin = len(top) * " "
-        top = [margin + x + margin for x in top]
-        return "\n".join(top + bottom)
+        margin = len(top_list) * " "
+        top_list = [margin + x + margin for x in top_list]
+        return "\n".join(top_list + bottom)
 
 
 def hanoi_graph(number_of_disks: int) -> str:
@@ -32,9 +32,9 @@ def hanoi_graph(number_of_disks: int) -> str:
     graph = graph.replace(" ", (1 + number_of_disks) * " ")
     graph = re.sub('([\w|-]+)', lambda m: m.group(1) + " ", graph)
 
-    graph = graph.split("\n")
-    result = [graph[0]]
-    for row in graph[1:]:
+    graph_list = graph.split("\n")
+    result = [graph_list[0]]
+    for row in graph_list[1:]:
         vertical_row = make_first_vertical_edge_row(row, number_of_disks)
         for j in range(number_of_disks):
             result.append(vertical_row)
