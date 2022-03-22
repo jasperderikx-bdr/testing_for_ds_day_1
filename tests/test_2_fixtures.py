@@ -69,6 +69,6 @@ def test_fixture_sequence(b: List) -> None:  # This test may only depend on 2 fi
 
 
 # -- Exercise 3 --
-# It's possible to pass data from a test to a fixture, so the result of a fixture depends on data in the test. For
-# example let's create a fixture that returns the start position of the puzzle. Off course this depends on the size of
-# the puzzle. See documentation https://docs.pytest.org/en/6.2.x/fixture.html#using-markers-to-pass-data-to-fixtures.
+# It's possible to pass data from a test to a fixture, so the result of a fixture depends on data in the test. Let's
+# create a fixture that returns the start position of the puzzle and use it in a test. The fixture depends on the size
+# of the puzzle. Documentation https://docs.pytest.org/en/6.2.x/fixture.html#using-markers-to-pass-data-to-fixtures.

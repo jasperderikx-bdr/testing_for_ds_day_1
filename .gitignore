@@ -2,6 +2,7 @@
 .git/
 
 data/*
+!*data/notes/slides_day_1.pptx
 !data/.gitkeep
 
 # files after building package
