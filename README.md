@@ -9,10 +9,10 @@
 
 Testing for Data Science</h2>
 
-<h4 align="center">Day 0</h4>
+<h4 align="center">Day 1</h4>
 
-These are the prerequisites. Work yourself through the readme to prepare yourself for the training.
-
+This training focuses on several aspects of PyTest. At the end of this training, you should be comfortable with marks, 
+fixtures, parametrization, error handling and temporary_paths. 
 
 ## ⚡ Installation
 
@@ -34,9 +34,9 @@ Note: if you just installed anaconda, you might have to initialize your terminal
 Install the project in develop mode, with:
    
 ```sh
-pip install -e .[develop]
+pip install -e ".[develop]"
 ```
-This will install all the dependencies listed in ```requirements.txt``` and ```requirements.dev.txt```.
+This will install all the dependencies listed in ```requirements.txt``` and ```requirements.dev.txt```. Have a look at them to get an idea with what we're working.
 
 ###3. setup pre-commit
 
@@ -62,16 +62,12 @@ git push
 
 ---
 
-After you completed the installation, it's time to do a little coding. 
-If you run pytest:
-
-```sh
-pytest
-```
-
-you will see that not all tests pass. Open the file: ... and follow the instructions in the comments.
+After you completed the installation, work yourself through the exercises in the ```tests\test_<subject>.py```.
 
 You've completed the assignment if:
-- All tests pass.
-- The pre-commit flags are passed.
-- You commited and pushed your code.
+- You answered all exercises.
+- All the tests pass.
+- The pre-commit steps are successful.
+- You committed and pushed your code.
+
+Please let me know if you have any questions!

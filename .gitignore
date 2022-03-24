@@ -2,12 +2,13 @@
 .git/
 
 data/*
+!*data/notes/slides_day_1.pptx
 !data/.gitkeep
 
 # files after building package
 dist/
 build/
-healt.egg-info/
+*.egg-info/
 
 # Testing
 tests/.pytest_cache/*
