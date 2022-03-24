@@ -2,8 +2,8 @@ from hanoi.basics import Position, number_of_positions, number_of_steps_of_solut
 
 
 # -- Exercise 1 --
-# How many different positions does the Tower of Hanoi have for n disks? Implement your answer in
-# number_of_positions() in hanoi/basics.py and make sure the following test passes.
+# How many positions does the Tower of Hanoi have for n disks? Implement your answer in number_of_positions() in
+# hanoi/basics.py and make sure the following test passes.
 def test_number_of_positions() -> None:
     number_of_disks = 1
     result = number_of_positions(number_of_disks=number_of_disks)
@@ -16,7 +16,8 @@ def test_number_of_positions() -> None:
 
 
 # -- Exercise 3 --
-# Write a test to find out whether code after the assert is executed. Does this depend on the outcome of the assertion?
+# Write a test to find out whether code after the assert-line is executed.
+# Does this depend on the outcome of the assertion?
 
 
 # -- Exercise 4 --
@@ -26,13 +27,13 @@ def test_number_of_positions() -> None:
 
 
 # -- Exercise 5 --
-# Write a test that checks whether the solution for 1000 disks takes more then 1000 steps. But use marks to skip it if
-# the number of cpus is less then 32.
+# Write a test that checks whether the solution for 1000 disks takes more than 1000 steps. But use marks to skip it if
+# the number of available cpus is less than 32.
 
 
 # -- Exercise 6 --
-# If you call number_of_steps_of_solution() with a string(), it probably raises an error. For now, we don't know how to
-# handle this properly, so mark the test as a failure.
+# If you call number_of_steps_of_solution() with a string as input, it probably raises an error. For now, we don't know
+# how to handle this properly, so mark the test as a failure.
 def test_wrong_input() -> None:
     number_of_steps_of_solution(number_of_disks="12")  # type: ignore
 
@@ -46,6 +47,6 @@ def test_long_position() -> None:
 
 # -- Exercise 8 --
 # According to a legend, the biggest version of this puzzle is situated in the Kashi Vishwanath Temple in India.
-# Priests have started moving around the 64 golden disks in 1780 and ones they are finished the earth will vanish.
+# Priests have started moving around the 64 golden disks in 1780 and once they are finished the earth will vanish.
 # Write a test that warns us (so let the test fail) if the priests will finish within 100 years from now. Assume the
 # priests can move 1 disk per second.

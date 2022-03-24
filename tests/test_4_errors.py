@@ -21,7 +21,7 @@ def test_move_is_valid() -> None:
 # -- Exercise 4 --
 # The class Position should validate the representation of the position, after an instance is created. It should raise a
 # TypeError if the input is not a string, and a ValueError if the string contains characters other than "a", "b", or
-# "c". Write 2 tests, one for each error.
+# "c". Add this functionality to the class and write 2 tests, one for each error.
 
 
 # -- Exercise 5 --

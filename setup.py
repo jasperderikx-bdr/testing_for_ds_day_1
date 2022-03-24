@@ -12,14 +12,14 @@ with open("requirements.dev.txt") as f:
     develop_requirements = f.read().splitlines()
 
 setuptools.setup(
-    name="testing_for_data_science_day_0",
+    name="testing_for_data_science_day_1",
     version="0.0.1",
     author="Jasper Derikx",
     author_email="jasper.derikx@bigdatarepublic.nl",
-    description="Testing for data science day 0.",
+    description="Testing for data science day 1.",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    packages=setuptools.find_packages(include=["src", "src.*"]),
+    packages=setuptools.find_packages(include=["hanoi", "hanoi.*"]),
     python_requires=">=3.7",
     install_requires=requirements,
     extras_require={

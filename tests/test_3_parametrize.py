@@ -11,9 +11,9 @@
 
 # -- Exercise 3 --
 # Like exercise 1, write a test for number_of_steps_of_solution(). But now, parametrize all tests in this module at
-# the same time?
+# the same time.
 
 
 # -- Exercise 4 --
-# Besides having parametrized all tests, we want to mark all tests with a new mark: "paragraph_3". Make sure to register
-# it as well.
+# Besides having parametrized all tests in one go, mark all tests with a new mark: "parametrization_paragraph" in one go
+# as well. Make sure to register the mark.
