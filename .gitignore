@@ -1,9 +1,10 @@
 ## The .gitignore file specifies things that git should ignore.
 .git/
 
+
 data/*
-!*data/notes/slides_day_1.pptx
-!data/.gitkeep
+!data/notes/slides_day_1.pptx
+!data/solution/basics.py
 
 # files after building package
 dist/
@@ -13,6 +14,7 @@ build/
 # Testing
 tests/.pytest_cache/*
 tests/pytest_basetemp/*
+tests/reports/*
 
 # IDE
 __pycache__/
