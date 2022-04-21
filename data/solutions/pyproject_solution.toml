@@ -24,9 +24,6 @@ ignore_missing_imports = true
 disable_error_code = [
     "attr-defined"
 ]
-exclude = [
-    "data/**/*.py",
-]
 files = [
     "hanoi/**/*.py",
     "tests/**/*.py"
@@ -38,6 +35,8 @@ testpaths = [
 ]
 markers = [
 "slow: marks tests as slow (deselect with '-m \"not slow\"')",
+"number_of_disks: Add number of disks to use in fixtures.",
+"mark_paragraph: Test defined in the mark paragraph."
 ]
 addopts = "--basetemp tests/pytest_basetemp"
 cache_dir = "tests/.pytest_cache"

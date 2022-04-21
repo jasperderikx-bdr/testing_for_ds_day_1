@@ -2,10 +2,6 @@
 .git/
 
 
-data/*
-!data/notes/slides_day_1.pptx
-!data/solution/basics.py
-
 # files after building package
 dist/
 build/
