@@ -2,11 +2,11 @@ import warnings
 
 
 def number_of_positions(number_of_disks: int) -> int:
-    pass
+    return 3 ** number_of_disks
 
 
 def number_of_steps_of_solution(number_of_disks: int) -> int:
-    pass
+    return 2 ** number_of_disks - 1
 
 
 class Position:
