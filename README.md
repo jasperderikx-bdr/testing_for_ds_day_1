@@ -22,8 +22,8 @@ fixtures, parametrization, error handling and temporary_paths.
 Create a virtual environment for this repo, for instance with [Anaconda](https://docs.anaconda.com/anaconda/install/):
 
 ```sh
-conda create --name testing_for_data_science -y python=3.7
-conda activate testing_for_data_science
+conda create --name testing_for_ds -y python=3.10
+conda activate testing_for_ds
 ```
 
 You can use the same virtual environment for the whole training.
@@ -68,6 +68,6 @@ You've completed the assignment if:
 - You answered all exercises.
 - All the tests pass.
 - The pre-commit steps are successful.
-- You committed and pushed your code.
+- You pushed your code to your personal branch.
 
 Please let me know if you have any questions!
