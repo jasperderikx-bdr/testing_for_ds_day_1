@@ -13,7 +13,7 @@ def b() -> Generator:
 
 
 @pytest.fixture
-def v(b: List) -> None:
+def v(b: List, rotate_3: None) -> None:
     b.append("v")
 
 
@@ -23,45 +23,45 @@ def a(b: List) -> None:
 
 
 @pytest.fixture
-def n(b: List) -> None:
+def n(b: List, duplicate: None) -> None:
     b.append("n")
 
 
 @pytest.fixture
-def t(b: List) -> None:
+def t(b: List, n: None) -> None:
     b.append("t")
 
 
 @pytest.fixture
-def g(b: List) -> None:
+def g(b: List, rotate_1: None) -> None:
     b.append("g")
 
 
 @pytest.fixture
-def e(b: List) -> None:
+def e(b: List, g: None) -> None:
     b.append("e")
 
 
 @pytest.fixture
-def duplicate(b: List) -> None:
+def duplicate(b: List, a: None) -> None:
     for i in range(len(b)):
         b.append(b[i])
 
 
 @pytest.fixture
-def rotate_1(b: List) -> None:
+def rotate_1(b: List, v: None) -> None:
     b.insert(0, b[-1])
     b.pop()
 
 
 @pytest.fixture
-def rotate_3(b: List) -> None:
+def rotate_3(b: List, t: None) -> None:
     for i in range(3):
         b.insert(0, b[-1])
         b.pop()
 
 
-def test_fixture_sequence(b: List) -> None:  # This test may only depend on 2 fixtures, so "b" and only 1 other fixture.
+def test_fixture_sequence(b: List, e: None) -> None:  # This test may depend on just 1 fixture, besides the fixture "b".
     assert b == ["v", "a", "n", "t", "a", "g", "e"]
 
 # -- Exercise 2 --

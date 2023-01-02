@@ -1,4 +1,5 @@
 import multiprocessing
+from datetime import datetime
 
 import pytest
 from _pytest.fixtures import FixtureRequest
@@ -77,3 +78,7 @@ def test_long_position() -> None:
 # Priests have started moving around the 64 golden disks in 1780 and once they are finished the earth will vanish.
 # Write a test that warns us (so let the test fail) if the priests will finish within 100 years from now. Assume the
 # priests can move 1 disk per second.
+def test_will_earth_vanish_within_100_years() -> None:
+    steps_taken_since_start = (datetime.now() - datetime(year=1780, month=1, day=1)).total_seconds()
+    steps_taken_in_100_years = 100 * 365 * 24 * 60 * 60
+    assert number_of_steps_of_solution(number_of_disks=1000) > steps_taken_in_100_years + steps_taken_since_start
