@@ -18,11 +18,11 @@ def test_number_of_positions() -> None:
 
 # -- Exercise 2 --
 # Write a test to find out what happens if you implement two tests with the same name.
-def test_same_name() -> None:  # problem
+def test_same_name() -> None:
     assert False
 
 
-def test_same_name() -> None:  # noqa: F811 type: ignore
+def test_same_name() -> None:  # noqa: F811
     assert True
 
 
