@@ -3,7 +3,7 @@ from typing import Generator, List
 import pytest
 
 # -- Exercise 1 --
-# Make test_fixture_sequence() pass. The test may only depend on 2 fixtures, but you can change the dependencies of the
+# Make test_fixture_sequence() pass. The test may only depend on 2 fixtures, but you can modify the dependencies of the
 # following fixtures.
 
 
@@ -61,11 +61,11 @@ def rotate_3(b: List) -> None:
         b.pop()
 
 
-def test_fixture_sequence(b: List) -> None:  # This test may only depend on 2 fixtures, so "b" and only 1 other fixture.
+def test_fixture_sequence(b: List) -> None:  # This test may depend on just 1 fixture, besides the fixture "b".
     assert b == ["v", "a", "n", "t", "a", "g", "e"]
 
 # -- Exercise 2 --
-# What happens if a fixture with a larger scope, depends on a fixture with a smaller scope?
+# What happens if a fixture with a broader scope, depends on a fixture with a narrower scope?
 
 
 # -- Exercise 3 --
