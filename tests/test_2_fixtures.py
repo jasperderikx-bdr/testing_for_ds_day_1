@@ -1,4 +1,4 @@
-from typing import Generator, List
+from typing import Iterator, List
 
 import pytest
 
@@ -8,7 +8,7 @@ import pytest
 
 
 @pytest.fixture
-def b() -> Generator:
+def b() -> Iterator[List]:
     yield []
 
 
