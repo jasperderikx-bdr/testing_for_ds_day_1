@@ -1,4 +1,4 @@
-from typing import Generator, List
+from typing import Generator, Iterator, List
 
 import pytest
 from _pytest.fixtures import FixtureRequest
@@ -71,12 +71,12 @@ def test_fixture_sequence(b: List, e: None) -> None:  # This test may depend on 
 # -- Exercise 2 --
 # What happens if a fixture with a broader scope, depends on a fixture with a narrower scope?
 @pytest.fixture(scope="class")
-def narrower_fixture() -> Generator:
+def narrower_fixture() -> Iterator[str]:
     yield "narrow"
 
 
 @pytest.fixture(scope="module")
-def broader_fixture(narrower_fixture: str) -> Generator:
+def broader_fixture(narrower_fixture: str) -> Iterator[str]:
     yield f"broader depends on {narrower_fixture}"
 
 
