@@ -2,7 +2,7 @@
 
 <img src="https://d1xdv7s0q9b0j6.cloudfront.net/static/images/logo.e2d3098a.2865948e8900.svg" width="200px"/><br/>
 ![Conda Latest Release](https://anaconda.org/conda-forge/pandas/badges/version.svg)
-![PyPI - Python Version](https://img.shields.io/badge/python-3.7.4-blue)
+![PyPI - Python Version](https://img.shields.io/badge/python-3.10-blue)
 ![wheel](https://img.shields.io/badge/wheel-yes-green)
 ![Code style](https://img.shields.io/badge/Code_style-flake8-lightgrey)
 ![Imports: isort](https://img.shields.io/badge/%20imports-isort-%231674b1?style=flat)
@@ -54,9 +54,10 @@ For example, it checks whether you've used type-hinting. See .pre-commit-config.
 
 ```sh
 git checkout -b <branch-name>
-git push
+git push --set-upstream origin <branch-name>
 ```
 
+Note: if you run into the error: "The unauthenticated git protocol on port 9418 is no longer supported.", this [stackoverflow page](https://stackoverflow.com/questions/70663523/the-unauthenticated-git-protocol-on-port-9418-is-no-longer-supported) might help.
 
 ## 📋 Assignment
 
