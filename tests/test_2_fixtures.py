@@ -1,4 +1,4 @@
-from typing import Generator, Iterator, List
+from typing import Iterator, List
 
 import pytest
 from _pytest.fixtures import FixtureRequest
@@ -11,7 +11,7 @@ from hanoi.basics import Position
 
 
 @pytest.fixture
-def b() -> Generator:
+def b() -> Iterator[List]:
     yield []
 
 
