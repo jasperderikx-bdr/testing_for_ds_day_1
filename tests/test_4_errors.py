@@ -1,3 +1,5 @@
+import pytest
+
 from hanoi.basics import Position
 from hanoi.solve import move_is_valid
 
@@ -12,6 +14,10 @@ def test_move_is_valid() -> None:
 # -- Exercise 2 --
 # If you parametrize 2 variables in 2 separate pytest.mark.parametrize lines. You get all possible combinations.
 # Use this to test in multiple situations that you can always move the smallest disk.
+@pytest.mark.parametrize("representation", ["aaa", "abcba", "acacac"])
+@pytest.mark.parametrize("peg", ["a", "b", "c"])
+def test_always_move_smallest_disk(representation: str, peg: str) -> None:
+    assert move_is_valid(disk_number=len(representation) - 1, position=Position(representation), peg=peg)
 
 
 # -- Exercise 3* --

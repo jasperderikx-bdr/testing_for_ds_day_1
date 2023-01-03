@@ -13,7 +13,9 @@ def move_disk(disk_number: int, position: Position, peg: str) -> Position:
 
 
 def move_is_valid(disk_number: int, position: Position, peg: str) -> bool:
-    return True
+    disk_is_on_top = position.representation[disk_number] not in position.representation[disk_number + 1:]
+    disk_stays_on_top = peg not in position.representation[disk_number + 1:]
+    return disk_is_on_top and disk_stays_on_top
 
 
 def next_position(current_position: Position, unused_peg: str) -> Position:

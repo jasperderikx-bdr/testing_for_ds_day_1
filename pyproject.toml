@@ -39,7 +39,8 @@ testpaths = [
 ]
 markers = [
     "slow: marks tests as slow (deselect with '-m \"not slow\"')",
-    "number_of_disks: mark a test with the number of disks used."
+    "number_of_disks: mark a test with the number of disks used.",
+    "parametrization_paragraph"
 ]
 addopts = "--basetemp tests/pytest_basetemp"
 cache_dir = "tests/.pytest_cache"
