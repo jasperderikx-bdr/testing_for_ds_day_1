@@ -1,7 +1,7 @@
 import pytest
 
 from hanoi.basics import Position
-from hanoi.solve import move_disk, move_is_valid, next_position
+from hanoi.solve import move_disk, move_is_valid, next_position, show_solution
 
 
 # -- Exercise 1* --
@@ -61,3 +61,5 @@ def test_next_position() -> None:
 
 # -- Exercise 7 --
 # Implement show_solution() in hanoi/solve.py and write at least one test.
+def test_show_solution() -> None:
+    assert show_solution(number_of_disks=2) == [Position("aa"), Position("ab"), Position("cb"), Position("cc")]

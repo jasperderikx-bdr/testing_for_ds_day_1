@@ -40,4 +40,16 @@ def show_solution(number_of_disks: int) -> List[Position]:
     Looking at the position graph from the slides, can you find the solution Path? What pattern can you find considering
     the unused peg for each step in the solution?
     """
-    return []
+    start_position = Position(number_of_disks * "a")
+    solution = [start_position]
+    if number_of_disks % 2 == 0:
+        unused_peg = "c"
+        next_unused_peg = {"a": "c", "b": "a", "c": "b"}
+    else:
+        unused_peg = "b"
+        next_unused_peg = {"a": "b", "b": "c", "c": "a"}
+
+    while solution[-1] != Position(number_of_disks * "c"):
+        solution.append(next_position(current_position=solution[-1], unused_peg=unused_peg))
+        unused_peg = next_unused_peg[unused_peg]
+    return solution
