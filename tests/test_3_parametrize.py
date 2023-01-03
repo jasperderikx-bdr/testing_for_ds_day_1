@@ -15,5 +15,5 @@
 
 
 # -- Exercise 4* --
-# Besides having parametrized all tests in one go, mark all tests with a new mark: "parametrization_paragraph" in one go
-# as well. Make sure to register the mark.
+# Mark all tests in this file with a new mark: "parametrization_paragraph", using only one line of code. Make sure to
+# register the mark.
