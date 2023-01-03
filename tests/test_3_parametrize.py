@@ -27,3 +27,6 @@ pytestmark = pytest.mark.parametrization_paragraph
 # -- Exercise 4 --
 # Create a fixture and parametrize it with two values. Use this fixture to run every test in this paragraph twice
 # -without- modifying the tests.
+@pytest.fixture(autouse=True, params=["real_world", "parallel_universe"])
+def dummy_fixture() -> None:
+    pass
