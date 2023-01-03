@@ -1,7 +1,7 @@
 import pytest
 
 from hanoi.basics import Position
-from hanoi.solve import move_disk, move_is_valid
+from hanoi.solve import move_disk, move_is_valid, next_position
 
 
 # -- Exercise 1* --
@@ -55,6 +55,8 @@ def test_challenging_warning() -> None:
 
 # -- Exercise 6 --
 # Implement next_position() in hanoi/solve.py and write at least one test.
+def test_next_position() -> None:
+    assert next_position(current_position=Position("aaaaa"), unused_peg="b") == Position("aaaac")
 
 
 # -- Exercise 7 --

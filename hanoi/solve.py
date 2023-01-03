@@ -22,9 +22,16 @@ def next_position(current_position: Position, unused_peg: str) -> Position:
     """Returns the only possible new Position, given the current Position and the unused peg.
 
     Given any Position and a peg that is not used for the next move. There is only one possible move left. Because
-    one of the disks on top of the remaining two pins, is larger than the other.
+    one of the disks on top of the other two pins, is larger than the other.
     """
-    return Position(representation="a")
+    other_pegs = list({"a", "b", "c"} - {unused_peg})
+    disk_on_top_of = dict()
+    for peg in other_pegs:
+        disk_on_top_of[peg] = current_position.representation.rfind(peg)
+    if disk_on_top_of[other_pegs[0]] < disk_on_top_of[other_pegs[1]]:  # weird because larger index means smaller disk.
+        return move_disk(disk_number=disk_on_top_of[other_pegs[1]], position=current_position, peg=other_pegs[0])
+    else:
+        return move_disk(disk_number=disk_on_top_of[other_pegs[0]], position=current_position, peg=other_pegs[1])
 
 
 def show_solution(number_of_disks: int) -> List[Position]:
