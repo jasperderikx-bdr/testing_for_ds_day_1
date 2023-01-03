@@ -25,3 +25,4 @@ def test_parameter_with_ids(number_of_disks: int) -> None:
 # -- Exercise 4* --
 # Mark all tests in this file with a new mark: "parametrization_paragraph", using only one line of code. Make sure to
 # register the mark.
+pytestmark = pytest.mark.parametrization_paragraph

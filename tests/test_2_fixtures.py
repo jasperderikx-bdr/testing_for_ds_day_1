@@ -70,7 +70,7 @@ def x() -> Iterator[List]:
 
 
 @pytest.fixture
-def v(x: List) -> None:
+def v(x: List, rotate_3: None) -> None:
     x.append("v")
 
 
@@ -80,43 +80,43 @@ def a(x: List) -> None:
 
 
 @pytest.fixture
-def n(x: List) -> None:
+def n(x: List, duplicate: None) -> None:
     x.append("n")
 
 
 @pytest.fixture
-def t(x: List) -> None:
+def t(x: List, n: None) -> None:
     x.append("t")
 
 
 @pytest.fixture
-def g(x: List) -> None:
+def g(x: List, rotate_1: None) -> None:
     x.append("g")
 
 
 @pytest.fixture
-def e(x: List) -> None:
+def e(x: List, g: None) -> None:
     x.append("e")
 
 
 @pytest.fixture
-def duplicate(x: List) -> None:
+def duplicate(x: List, a: None) -> None:
     for i in range(len(x)):
         x.append(x[i])
 
 
 @pytest.fixture
-def rotate_1(x: List) -> None:
+def rotate_1(x: List, v: None) -> None:
     x.insert(0, x[-1])
     x.pop()
 
 
 @pytest.fixture
-def rotate_3(x: List) -> None:
+def rotate_3(x: List, t: None) -> None:
     for i in range(3):
         x.insert(0, x[-1])
         x.pop()
 
 
-def test_vantage(x: List) -> None:  # This test may depend on just 1 fixture, besides the fixture "x".
+def test_vantage(x: List, e: None) -> None:  # This test may depend on just 1 fixture, besides the fixture "x".
     assert x == ["v", "a", "n", "t", "a", "g", "e"]
