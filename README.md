@@ -64,6 +64,8 @@ Note: if you run into the error: "The unauthenticated git protocol on port 9418 
 ---
 
 After you completed the installation, work yourself through the exercises in the ```tests\test_<subject>.py```.
+It's recommended to make at least the exercises marked with an '*', but try to make as many exercises as possible as 
+they will cover even more information than given in the slides.
 
 You've completed the assignment if:
 - You answered all exercises.

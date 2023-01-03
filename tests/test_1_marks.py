@@ -7,7 +7,7 @@ from _pytest.fixtures import FixtureRequest
 from hanoi.basics import Position, number_of_positions, number_of_steps_of_solution
 
 
-# -- Exercise 1 --
+# -- Exercise 1* --
 # How many positions does the Tower of Hanoi have for n disks? Implement your answer in number_of_positions() in
 # hanoi/basics.py and make sure the following test passes.
 def test_number_of_positions() -> None:
@@ -39,7 +39,7 @@ def test_code_after_assertion(request: FixtureRequest) -> None:
     request.config.cache.set("cached_variable_multiple_assertions_demonstration", "End of test_code_after_assertion.")
 
 
-# -- Exercise 4 --
+# -- Exercise 4* --
 # Implement number_of_steps_of_solution() in hanoi/basics.py, which returns the number of steps it takes to solve the
 # Tower of Hanoi with n disks. Write a test with multiple asserts, that checks if your implementation is correct if the
 # number of disks is 1, 2 or 3.
@@ -57,7 +57,7 @@ def test_over_1000() -> None:
     assert number_of_steps_of_solution(number_of_disks=1000) > 1000
 
 
-# -- Exercise 6 --
+# -- Exercise 6* --
 # If you call number_of_steps_of_solution() with a string as input, it probably raises an error. For now, we don't know
 # how to handle this properly, so mark the test as a failure.
 @pytest.mark.xfail(reason="Wrong input.", raises=TypeError, run=True, strict=True)

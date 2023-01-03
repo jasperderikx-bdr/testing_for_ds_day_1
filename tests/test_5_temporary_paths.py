@@ -4,7 +4,7 @@
 # Write a test that checks that the moves in the bottom of the graph are valid. Do this for multiple graphs.
 
 
-# -- Exercise 2 --
+# -- Exercise 2* --
 # Write a test that checks that the output of the printed graph with 2 disks, is exactly as expected.
 # Use the fixture tmp_path to save the graph, so you can open it after the test has completed.
 

@@ -3,7 +3,7 @@ import pytest
 from hanoi.basics import number_of_positions
 
 
-# -- Exercise 1 --
+# -- Exercise 1* --
 # Test the output of def number_of_positions() from hanoi/basics.py, parametrizing over number_of_disks.
 @pytest.mark.parametrize("number_of_disks, expected_number_of_positions", [(1, 3), (2, 9), (3, 27)])
 def test_number_of_positions(number_of_disks: int, expected_number_of_positions: int) -> None:
@@ -22,6 +22,6 @@ def test_parameter_with_ids(number_of_disks: int) -> None:
 # the same time.
 
 
-# -- Exercise 4 --
-# Besides having parametrized all tests in one go, mark all tests with a new mark: "parametrization_paragraph" in one go
-# as well. Make sure to register the mark.
+# -- Exercise 4* --
+# Mark all tests in this file with a new mark: "parametrization_paragraph", using only one line of code. Make sure to
+# register the mark.
