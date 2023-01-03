@@ -11,6 +11,10 @@ def number_of_steps_of_solution(number_of_disks: int) -> int:
 
 class Position:
     def __init__(self, representation: str):
+        if type(representation) != str:
+            raise TypeError("Representation should be a string.")
+        if not set(representation).issubset({"a", "b", "c"}):
+            raise ValueError("Representation can only contain the characters 'a', 'b' and 'c'.")
         self.representation = representation
         self._warn_ambitious_players()
 
