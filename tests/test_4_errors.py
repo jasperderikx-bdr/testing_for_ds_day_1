@@ -14,7 +14,7 @@ def test_move_is_valid() -> None:
 # Use this to test in multiple situations that you can always move the smallest disk.
 
 
-# -- Exercise 3 --
+# -- Exercise 3* --
 # Test that move_disk() informs the user what the disk, position and peg were when a move is invalid.
 
 
@@ -24,7 +24,7 @@ def test_move_is_valid() -> None:
 # "c". Add this functionality to the class and write 2 tests, one for each error.
 
 
-# -- Exercise 5 --
+# -- Exercise 5* --
 # The class Position can warn the user. Test that the warning message contains "challenge".
 # For documentation see: https://docs.pytest.org/en/6.2.x/warnings.html#warns.
 

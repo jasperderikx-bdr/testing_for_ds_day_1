@@ -1,6 +1,6 @@
 
 
-# -- Exercise 1 --
+# -- Exercise 1* --
 # Test the output of def number_of_positions() from hanoi/basics.py, parametrizing over number_of_disks.
 
 
@@ -14,6 +14,6 @@
 # the same time.
 
 
-# -- Exercise 4 --
+# -- Exercise 4* --
 # Besides having parametrized all tests in one go, mark all tests with a new mark: "parametrization_paragraph" in one go
 # as well. Make sure to register the mark.
