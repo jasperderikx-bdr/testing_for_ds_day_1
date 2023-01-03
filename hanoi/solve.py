@@ -17,6 +17,11 @@ def move_is_valid(disk_number: int, position: Position, peg: str) -> bool:
 
 
 def next_position(current_position: Position, unused_peg: str) -> Position:
+    """Returns the only possible new Position, given the current Position and the unused peg.
+
+    Given any Position and a peg that is not used for the next move. There is only one possible move left. Because
+    one of the disks on top of the remaining two pins, is larger than the other.
+    """
     return Position(representation="a")
 
 
