@@ -1,5 +1,5 @@
 # -- Exercise 1 --
-# The code in hanoi.graph.py generates the position-graphs. It's difficult to say from the code that the output is
+# The code in hanoi/graph.py generates the position-graphs. It's difficult to say from the code that the output is
 # correct so let's use pytest to gain more confidence.
 # Write a test that checks that the moves in the bottom of the graph are valid. Do this for multiple graphs.
 
