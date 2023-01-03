@@ -9,11 +9,11 @@
 # Find out what "ids" does, when used in pytest.mark.parametrize(... ids= ...).
 
 
-# -- Exercise 3 --
-# Like exercise 1, write a test for number_of_steps_of_solution(). But now, parametrize all tests in this module at
-# the same time.
-
-
-# -- Exercise 4* --
+# -- Exercise 3* --
 # Mark all tests in this file with a new mark: "parametrization_paragraph", using only one line of code. Make sure to
 # register the mark.
+
+
+# -- Exercise 4 --
+# Create a fixture and parametrize it with two values. Use this fixture to run every test in this paragraph twice
+# -without- modifying the tests.
