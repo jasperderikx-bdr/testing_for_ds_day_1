@@ -35,4 +35,9 @@ def next_position(current_position: Position, unused_peg: str) -> Position:
 
 
 def show_solution(number_of_disks: int) -> List[Position]:
+    """Returns a list of Positions of the fastest route from the start Position 'aa...a' to the end Position 'cc...c'.
+
+    Looking at the position graph from the slides, can you find the solution Path? What pattern can you find considering
+    the unused peg for each step in the solution?
+    """
     return []
