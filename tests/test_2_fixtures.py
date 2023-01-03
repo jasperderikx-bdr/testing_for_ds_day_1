@@ -8,7 +8,7 @@ import pytest
 # If one fixture is (indirectly) requested multiple times for the same test, the value is cached. Make the test pass.
 @pytest.fixture
 def b() -> pd.DataFrame:
-    return pd.DataFrame(columns=["b"])
+    yield pd.DataFrame(columns=["b"])
 
 
 @pytest.fixture
@@ -38,8 +38,6 @@ def test_bdr(b: pd.DataFrame, d: None, r: None) -> None:
 # -- Exercise 4 --
 # Make test_vantage() pass. The test may only depend on 2 fixtures, but you can modify the dependencies of the other
 # fixtures.
-
-
 @pytest.fixture
 def x() -> Iterator[List]:
     yield []
