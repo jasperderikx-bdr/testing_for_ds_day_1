@@ -11,7 +11,7 @@ from hanoi.basics import Position
 # If one fixture is (indirectly) requested multiple times for the same test, the value is cached. Make the test pass.
 @pytest.fixture
 def b() -> pd.DataFrame:
-    return pd.DataFrame(columns=["b"])
+    yield pd.DataFrame(columns=["b"])
 
 
 @pytest.fixture
