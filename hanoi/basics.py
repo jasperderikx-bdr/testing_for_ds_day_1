@@ -14,7 +14,7 @@ class Position:
         if type(representation) != str:
             raise TypeError("Representation should be a string.")
         if not set(representation).issubset({"a", "b", "c"}):
-            raise ValueError("Representation can only contain the characters 'a', 'b' and 'c'.")
+            raise ValueError(f"Representation {representation} is invalid, it can only contain 'a', 'b' and 'c'.")
         self.representation = representation
         self._warn_ambitious_players()
 
