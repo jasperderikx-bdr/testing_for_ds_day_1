@@ -11,7 +11,7 @@
 
 # -- Exercise 3 --
 # Write a test that saves the printed graph for 1, ..., 4 disks in separate files and checks that the combined file size
-# is smaller than 1Kb. Use the fixture tmp_path_factory.
+# is smaller than 1MB. Use the fixture tmp_path_factory.
 
 
 # -- Exercise 4 --
