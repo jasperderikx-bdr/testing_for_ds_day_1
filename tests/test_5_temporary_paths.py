@@ -47,7 +47,7 @@ def test_hanoi_graph_2(tmp_path: PosixPath) -> None:
 
 # -- Exercise 3 --
 # Write a test that saves the printed graph for 1, ..., 4 disks in separate files and checks that the combined file size
-# is smaller than 1Kb. Use the fixture tmp_path_factory.
+# is smaller than 1MB. Use the fixture tmp_path_factory.
 def test_combined_file_size(tmp_path_factory: TempPathFactory) -> None:
     total = 0
     for number_of_disks in [1, 2, 3, 4]:
@@ -66,6 +66,7 @@ def test_combined_file_size(tmp_path_factory: TempPathFactory) -> None:
 def test_solution_in_graph(number_of_disks: int) -> None:
     graph = hanoi_graph(number_of_disks=number_of_disks)
     print(graph)
+
 
 # -- Exercise 5 --
 # Rewrite the above tests with fixtures such that all the used graphs are just generated ones.
