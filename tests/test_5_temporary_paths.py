@@ -20,4 +20,5 @@
 
 
 # -- Exercise 5 --
-# Rewrite the tests above with fixtures such that all the used graphs are just generated ones.
+# Rewrite the tests above with fixtures such that all the used graphs are just generated ones. (In this case it won't
+# save much time, but in general it is better to perform complex calculations just ones.)
