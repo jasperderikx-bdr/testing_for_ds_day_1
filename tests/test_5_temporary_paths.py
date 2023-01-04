@@ -1,4 +1,5 @@
 import os
+import re
 from pathlib import PosixPath
 
 import pytest
@@ -6,7 +7,7 @@ from _pytest.tmpdir import TempPathFactory
 
 from hanoi.basics import Position
 from hanoi.graph import hanoi_graph
-from hanoi.solve import move_disk
+from hanoi.solve import move_disk, show_solution
 
 
 # -- Exercise 1 --
@@ -17,7 +18,7 @@ from hanoi.solve import move_disk
 def test_moves_on_bottom_are_possible(number_of_disks: int) -> None:
     graph = hanoi_graph(number_of_disks=number_of_disks)
     bottom_row = graph.split("\n")[-1]
-    positions = [Position(x.strip()) for x in bottom_row.split("-") if x != ""]
+    positions = [Position(x) for x in re.findall(r'\w+', bottom_row)]
     for i in range(len(positions) - 1):
         comparison = [x == y for (x, y) in zip(positions[i].representation, positions[i + 1].representation)]
         disk_number = comparison.index(False)
@@ -49,14 +50,14 @@ def test_hanoi_graph_2(tmp_path: PosixPath) -> None:
 # Write a test that saves the printed graph for 1, ..., 4 disks in separate files and checks that the combined file size
 # is smaller than 1MB. Use the fixture tmp_path_factory.
 def test_combined_file_size(tmp_path_factory: TempPathFactory) -> None:
-    total = 0
+    total_size = 0
     for number_of_disks in [1, 2, 3, 4]:
         path = tmp_path_factory.mktemp(f"file_size_{number_of_disks}") / "file.txt"
         with open(path, "w") as file:
             print(hanoi_graph(number_of_disks=number_of_disks), file=file)
-        total += os.path.getsize(path)
+        total_size += os.path.getsize(path)
 
-    assert total < 2 ** 20  # == 1 MB
+    assert total_size < 2 ** 20  # == 1 MB
 
 
 # -- Exercise 4 --
@@ -65,7 +66,11 @@ def test_combined_file_size(tmp_path_factory: TempPathFactory) -> None:
 @pytest.mark.parametrize("number_of_disks", [1, 2, 3, 4, 5])
 def test_solution_in_graph(number_of_disks: int) -> None:
     graph = hanoi_graph(number_of_disks=number_of_disks)
-    print(graph)
+    lines = graph.split("\n")
+    lines_with_positions = [line for line in lines if "/" not in line]
+    most_right_positions = [re.findall(r'\w+', line)[-1] for line in lines_with_positions]
+    most_right_positions = [Position(representation=x) for x in most_right_positions]
+    assert most_right_positions == show_solution(number_of_disks=number_of_disks)
 
 
 # -- Exercise 5 --
