@@ -1,6 +1,7 @@
 import os
 import re
 from pathlib import PosixPath
+from typing import Iterator
 
 import pytest
 from _pytest.tmpdir import TempPathFactory
@@ -75,3 +76,8 @@ def test_solution_in_graph(number_of_disks: int) -> None:
 
 # -- Exercise 5 --
 # Rewrite the tests above with fixtures such that all the used graphs are just generated ones.
+@pytest.fixture(scope="module")
+def hanoi_graph_cache() -> Iterator[dict]:
+    yield {n: hanoi_graph(number_of_disks=n) for n in [1, 2, 3, 4, 5]}
+# And now replace 'hanoi_graph(number_of_disks=number_of_disks)' with 'hanoi_graph_cache[number_of_disks]' in the tests.
+# Mocking hanoi_graph() in addition is also possible, but we will cover that in the next training.

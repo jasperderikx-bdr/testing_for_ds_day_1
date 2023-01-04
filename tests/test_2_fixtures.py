@@ -25,7 +25,7 @@ def r(b: pd.DataFrame) -> None:
 
 
 def test_bdr(b: pd.DataFrame, d: None, r: None) -> None:
-    assert list(b.columns) == "?"
+    assert list(b.columns) == ["b", "d", "r"]
 
 
 # -- Exercise 2 --
