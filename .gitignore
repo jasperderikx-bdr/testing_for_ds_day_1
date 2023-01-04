@@ -3,7 +3,7 @@
 
 data/*
 !*data/notes/slides_day_1.pptx
-!data/.gitkeep
+!*data/solutions/
 
 # files after building package
 dist/
