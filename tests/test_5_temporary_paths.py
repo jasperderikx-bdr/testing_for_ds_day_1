@@ -20,4 +20,4 @@
 
 
 # -- Exercise 5 --
-# Rewrite the above tests with fixtures such that all the used graphs are just generated ones.
+# Rewrite the tests above with fixtures such that all the used graphs are just generated ones.
