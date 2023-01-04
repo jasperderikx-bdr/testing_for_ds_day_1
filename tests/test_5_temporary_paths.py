@@ -36,14 +36,14 @@ def test_hanoi_graph_2(tmp_path: PosixPath) -> None:
     with open(tmp_path / "hanoi_graph_2.txt", "w") as file:
         print(graph_2, file=file)
     assert graph_2 == "         aa          \n" \
-                      "        /  \\         \n" \
-                      "       /    \\        \n" \
+                      "        /  \         \n" \
+                      "       /    \        \n" \
                       "      ac----ab       \n" \
-                      "     /        \\      \n" \
-                      "    /          \\     \n" \
+                      "     /        \      \n" \
+                      "    /          \     \n" \
                       "   bc          cb    \n" \
-                      "  /  \\        /  \\   \n" \
-                      " /    \\      /    \\  \n" \
+                      "  /  \        /  \   \n" \
+                      " /    \      /    \  \n" \
                       "bb----ba----ca----cc "
 
 
@@ -75,7 +75,8 @@ def test_solution_in_graph(number_of_disks: int) -> None:
 
 
 # -- Exercise 5 --
-# Rewrite the tests above with fixtures such that all the used graphs are just generated ones.
+# Rewrite the tests above with fixtures such that all the used graphs are just generated ones. (In this case it won't
+# save much time, but in general it is better to perform complex calculations just ones.)
 @pytest.fixture(scope="module")
 def hanoi_graph_cache() -> Iterator[dict]:
     yield {n: hanoi_graph(number_of_disks=n) for n in [1, 2, 3, 4, 5]}
