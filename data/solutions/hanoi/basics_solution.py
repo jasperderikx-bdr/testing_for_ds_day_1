@@ -2,15 +2,19 @@ import warnings
 
 
 def number_of_positions(number_of_disks: int) -> int:
-    pass
+    return 3 ** number_of_disks
 
 
 def number_of_steps_of_solution(number_of_disks: int) -> int:
-    pass
+    return 2 ** number_of_disks - 1
 
 
 class Position:
     def __init__(self, representation: str):
+        if type(representation) != str:
+            raise TypeError("Representation should be a string.")
+        if not set(representation).issubset({"a", "b", "c"}):
+            raise ValueError(f"Representation {representation} is invalid, it can only contain 'a', 'b' and 'c'.")
         self.representation = representation
         self._warn_ambitious_players()
 

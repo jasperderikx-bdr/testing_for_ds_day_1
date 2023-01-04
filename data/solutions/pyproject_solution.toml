@@ -22,7 +22,8 @@ warn_unused_configs = true
 disallow_untyped_defs = true
 ignore_missing_imports = true
 disable_error_code = [
-    "attr-defined"
+    "attr-defined",
+    "no-redef"
 ]
 files = [
     "hanoi/**/*.py",
@@ -37,7 +38,9 @@ testpaths = [
     "tests",
 ]
 markers = [
-"slow: marks tests as slow (deselect with '-m \"not slow\"')",
+    "slow: marks tests as slow (deselect with '-m \"not slow\"')",
+    "number_of_disks: mark a test with the number of disks used.",
+    "parametrization_paragraph"
 ]
 addopts = "--basetemp tests/pytest_basetemp"
 cache_dir = "tests/.pytest_cache"
