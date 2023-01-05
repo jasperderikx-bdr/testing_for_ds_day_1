@@ -3,6 +3,7 @@
 
 data/*
 !*data/notes/slides_day_1.pptx
+!*data/notes/slides_day_1.pdf
 !*data/solutions/
 
 # files after building package
